@@ -7,7 +7,7 @@ export const DEFAULT_SETTINGS: Settings = {
   id: 1,
   store_name: "John Foos CBA",
   store_subtitle: "CARRITO DE COMPRAS",
-  whatsapp_number: process.env.NEXT_PUBLIC_DEFAULT_WHATSAPP || "549351169536",
+  whatsapp_number: process.env.NEXT_PUBLIC_DEFAULT_WHATSAPP || "549351009990",
   show_offer_banner: false,
   offer_banner_text: "",
   currency_symbol: "$",

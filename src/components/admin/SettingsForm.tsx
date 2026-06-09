@@ -75,7 +75,7 @@ export default function SettingsForm({
           className={inputCls}
           value={form.whatsapp_number}
           onChange={(e) => set("whatsapp_number", e.target.value)}
-          placeholder="549351169536"
+          placeholder="549351009990"
           inputMode="tel"
         />
         <p className="mt-1 text-xs text-neutral-400">
