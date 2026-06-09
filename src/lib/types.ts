@@ -26,7 +26,7 @@ export interface Settings {
   id: number;
   store_name: string;
   store_subtitle: string;
-  whatsapp_number: string; // solo dígitos, ej "549351009990"
+  whatsapp_number: string; // solo dígitos, ej "5493518009990"
   show_offer_banner: boolean;
   offer_banner_text: string;
   currency_symbol: string;

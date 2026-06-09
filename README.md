@@ -26,7 +26,7 @@ En Supabase → **SQL Editor** → **New query**, pegá y ejecutá **en orden**:
 
 1. `supabase/migrations/0001_init.sql` → crea tablas, seguridad (RLS), el bucket
    de imágenes y carga la configuración inicial (incluye el número de WhatsApp
-   `549351009990`) + productos de ejemplo.
+   `5493518009990`) + productos de ejemplo.
 2. `supabase/migrations/0002_admin_user.sql` → crea el usuario admin.
 
 > **Usuario admin (recomendado por panel):** en vez del archivo `0002`, podés
@@ -48,7 +48,7 @@ Editá `.env.local`:
 ```
 NEXT_PUBLIC_SUPABASE_URL=https://xxxxxxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
-NEXT_PUBLIC_DEFAULT_WHATSAPP=549351009990
+NEXT_PUBLIC_DEFAULT_WHATSAPP=5493518009990
 ```
 
 ## 5) Instalar y correr
