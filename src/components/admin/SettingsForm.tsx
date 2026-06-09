@@ -28,7 +28,7 @@ export default function SettingsForm({
     setError(null);
     try {
       const cleaned: Partial<Settings> = {
-        store_name: form.store_name.trim() || "JOHN FOOS",
+        store_name: form.store_name.trim() || "John Foos CBA",
         store_subtitle: form.store_subtitle.trim(),
         whatsapp_number: sanitizeWhatsapp(form.whatsapp_number),
         currency_symbol: form.currency_symbol.trim() || "$",

@@ -17,7 +17,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "JOHN FOOS — Catálogo",
+  title: "John Foos CBA — Catálogo",
   description: "Catálogo de zapatillas. Hacé tu pedido por WhatsApp.",
 };
 

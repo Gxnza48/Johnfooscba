@@ -23,7 +23,7 @@ $$;
 -- ----------------------------------------------------------------------------
 create table if not exists public.settings (
   id                integer primary key default 1,
-  store_name        text    not null default 'JOHN FOOS',
+  store_name        text    not null default 'John Foos CBA',
   store_subtitle    text    not null default 'CARRITO DE COMPRAS',
   whatsapp_number   text    not null default '549351169536',
   show_offer_banner boolean not null default false,
@@ -181,7 +181,7 @@ create policy product_images_admin_delete
 --  SEED: fila de configuración con el número de WhatsApp nuevo
 -- ----------------------------------------------------------------------------
 insert into public.settings (id, store_name, store_subtitle, whatsapp_number, currency_symbol)
-values (1, 'JOHN FOOS', 'CARRITO DE COMPRAS', '549351169536', '$')
+values (1, 'John Foos CBA', 'CARRITO DE COMPRAS', '549351169536', '$')
 on conflict (id) do nothing;
 
 -- ----------------------------------------------------------------------------

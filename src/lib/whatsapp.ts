@@ -20,7 +20,7 @@ export function buildWhatsappLink(items: CartItem[], settings: Settings | null):
     settings?.whatsapp_number || process.env.NEXT_PUBLIC_DEFAULT_WHATSAPP || ""
   );
   const symbol = settings?.currency_symbol || "$";
-  const storeName = settings?.store_name || "JOHN FOOS";
+  const storeName = settings?.store_name || "John Foos CBA";
 
   const lines: string[] = [];
   lines.push(`¡Hola ${storeName}! 👟 Quiero hacer este pedido:`);

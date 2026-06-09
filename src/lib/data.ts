@@ -5,7 +5,7 @@ import type { Product, Settings } from "./types";
 
 export const DEFAULT_SETTINGS: Settings = {
   id: 1,
-  store_name: "JOHN FOOS",
+  store_name: "John Foos CBA",
   store_subtitle: "CARRITO DE COMPRAS",
   whatsapp_number: process.env.NEXT_PUBLIC_DEFAULT_WHATSAPP || "549351169536",
   show_offer_banner: false,
