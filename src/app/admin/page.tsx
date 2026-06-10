@@ -6,6 +6,7 @@ import LoginForm from "@/components/admin/LoginForm";
 import ProductTable from "@/components/admin/ProductTable";
 import ProductForm from "@/components/admin/ProductForm";
 import SettingsForm from "@/components/admin/SettingsForm";
+import ChangePasswordForm from "@/components/admin/ChangePasswordForm";
 import { getSupabaseBrowser, isSupabaseConfigured } from "@/lib/supabase/client";
 import { signOut } from "@/lib/admin";
 import { DEFAULT_SETTINGS, fetchAllProducts, fetchSettings } from "@/lib/data";
@@ -168,10 +169,13 @@ export default function AdminPage() {
         )}
 
         {tab === "settings" && (
-          <SettingsForm
-            initial={settings}
-            onSaved={(s) => setSettings(s)}
-          />
+          <>
+            <SettingsForm
+              initial={settings}
+              onSaved={(s) => setSettings(s)}
+            />
+            <ChangePasswordForm />
+          </>
         )}
       </main>
 

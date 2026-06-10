@@ -24,6 +24,29 @@ export async function getSession() {
   return data.session;
 }
 
+// Cambia la contraseña del admin logueado.
+// Verifica la contraseña actual reautenticando antes de aplicar la nueva.
+export async function changePassword(currentPassword: string, newPassword: string) {
+  const supabase = getSupabaseBrowser();
+
+  const { data: userData } = await supabase.auth.getUser();
+  const email = userData.user?.email;
+  if (!email) throw new Error("No hay una sesión activa. Volvé a iniciar sesión.");
+
+  // Reautenticar con la contraseña actual (valida que sea correcta)
+  const { error: signInErr } = await supabase.auth.signInWithPassword({
+    email,
+    password: currentPassword,
+  });
+  if (signInErr) {
+    throw new Error("La contraseña actual es incorrecta.");
+  }
+
+  // Aplicar la nueva contraseña
+  const { error: updateErr } = await supabase.auth.updateUser({ password: newPassword });
+  if (updateErr) throw updateErr;
+}
+
 // ---------- Settings ----------
 export async function saveSettings(patch: Partial<Settings>) {
   const supabase = getSupabaseBrowser();
